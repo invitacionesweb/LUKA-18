@@ -156,5 +156,17 @@
       <script>
         AOS.init();
     </script>
+        <script>
+
+            function copyToClipboard(text) {
+               const tempInput = document.createElement("input");
+               document.body.appendChild(tempInput);
+               tempInput.value = text;
+               tempInput.select();
+               document.execCommand("copy");
+               document.body.removeChild(tempInput);
+               alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
+             }
+           </script>
 </body>
 </html>
